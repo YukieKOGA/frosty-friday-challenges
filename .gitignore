@@ -1,0 +1,13 @@
+# Snowflake and SQL generated files
+*.log
+*.tmp
+
+# VS Code settings
+# 個別設定は共有したいためフォルダごと管理
+
+# MacOS artifacts
+.DS_Store
+
+# Node/Python virtual env (if any)
+node_modules/
+venv/
