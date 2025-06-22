@@ -1,0 +1,3 @@
+-- 動作確認用クエリ集
+-- 例: テーブル件数確認
+-- SELECT COUNT(*) FROM <table_name>;
