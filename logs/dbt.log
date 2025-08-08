@@ -1,0 +1,174 @@
+
+
+============================== 11:07:41.525765 | 71f419e7-6cfb-4d9c-a14a-ec2fc3ef1f51 ==============================
+[0m11:07:41.525765 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m11:07:41.526858 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/tmp/dbt/logs', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt/', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m11:07:41.597648 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m11:07:41.888766 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m11:07:42.598899 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m11:07:42.600319 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:07:43.994047 [error] [Dummy-1   ]: Encountered an error:
+Compilation Error
+  Model 'model.frosty_friday_challenges.week1_basic' (models/week1/week1_basic.sql) depends on a node named 'my_first_dbt_model' which was not found
+[0m11:07:43.995979 [debug] [Dummy-1   ]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 2.564706, "process_in_blocks": "0", "process_kernel_time": 1.12, "process_mem_max_rss": "456008", "process_out_blocks": "0", "process_user_time": 5.44}
+[0m11:07:43.996710 [debug] [Dummy-1   ]: Command `cli compile` failed at 11:07:43.996417 after 2.57 seconds
+[0m11:07:43.997353 [debug] [Dummy-1   ]: Flushing usage events
+
+
+============================== 11:42:53.786857 | e4fdf876-b195-4849-bc81-a7fa8f07692e ==============================
+[0m11:42:53.786857 [info ] [Dummy-1   ]: Running with dbt=1.9.4
+[0m11:42:53.787921 [debug] [Dummy-1   ]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/tmp/dbt/', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/tmp/dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt ', 'log_format': 'default', 'static_parser': 'True', 'target_path': '/tmp/dbt/target/', 'introspect': 'True', 'send_anonymous_usage_stats': 'False'}
+[0m11:42:53.856853 [error] [Dummy-1   ]:  adapter: Invalid profile: 'user' is a required property.
+[0m11:42:54.141586 [info ] [Dummy-1   ]: Registered adapter: snowflake=1.9.2
+[0m11:42:54.751608 [debug] [Dummy-1   ]: checksum: 53ed91fada2233efb98368d1716b44ab532c83a9c293cf1890b7905d5b45fb25, vars: {}, profile: , target: dev, version: 1.9.4
+[0m11:42:54.753631 [info ] [Dummy-1   ]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:42:56.356299 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m11:42:56.358944 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m11:42:56.410663 [info ] [Dummy-1   ]: Found 2 models, 475 macros
+[0m11:42:56.413045 [info ] [Dummy-1   ]: 
+[0m11:42:56.413612 [info ] [Dummy-1   ]: Concurrency: 1 threads (target='dev')
+[0m11:42:56.414108 [info ] [Dummy-1   ]: 
+[0m11:42:56.414909 [debug] [Dummy-1   ]: Acquiring new snowflake connection 'master'
+[0m11:42:56.421859 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_PROJECT'
+[0m11:42:56.551151 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT"
+[0m11:42:56.551800 [debug] [ThreadPool]: On list_DBT_PROJECT: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT"} */
+show terse schemas in database DBT_PROJECT
+    limit 10000
+[0m11:42:56.552380 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:42:56.903520 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.351 seconds
+[0m11:42:56.910642 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT"
+[0m11:42:56.911371 [debug] [ThreadPool]: On list_DBT_PROJECT: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT"} */
+show terse schemas in database DBT_PROJECT
+    limit 10000
+[0m11:42:56.911866 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:42:57.318075 [debug] [ThreadPool]: SQL status: SUCCESS 3 in 0.406 seconds
+[0m11:42:57.322183 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_DBT_PROJECT_week1'
+[0m11:42:57.339165 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT_week1"
+[0m11:42:57.339844 [debug] [ThreadPool]: On list_DBT_PROJECT_week1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT_week1"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m11:42:57.340334 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:42:57.663287 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.323 seconds
+[0m11:42:57.669333 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT_week1"
+[0m11:42:57.670011 [debug] [ThreadPool]: On list_DBT_PROJECT_week1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT_week1"} */
+show objects in DBT_PROJECT.week1
+    limit 10000
+    
+;
+[0m11:42:57.752459 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 0.082 seconds
+[0m11:42:57.754962 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT_week1"
+[0m11:42:57.755514 [debug] [ThreadPool]: On list_DBT_PROJECT_week1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT_week1"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m11:42:57.807800 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.052 seconds
+[0m11:42:57.810294 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_DBT_PROJECT_week1, now list_DBT_PROJECT_PUBLIC)
+[0m11:42:57.816022 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT_PUBLIC"
+[0m11:42:57.816598 [debug] [ThreadPool]: On list_DBT_PROJECT_PUBLIC: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT_PUBLIC"} */
+alter session set quoted_identifiers_ignore_case = false;
+[0m11:42:57.817079 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:42:58.184725 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.367 seconds
+[0m11:42:58.187144 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT_PUBLIC"
+[0m11:42:58.187762 [debug] [ThreadPool]: On list_DBT_PROJECT_PUBLIC: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT_PUBLIC"} */
+show objects in DBT_PROJECT.PUBLIC
+    limit 10000
+    
+;
+[0m11:42:58.261620 [debug] [ThreadPool]: SQL status: SUCCESS 0 in 0.073 seconds
+[0m11:42:58.263995 [debug] [ThreadPool]: Using snowflake connection "list_DBT_PROJECT_PUBLIC"
+[0m11:42:58.264568 [debug] [ThreadPool]: On list_DBT_PROJECT_PUBLIC: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "connection_name": "list_DBT_PROJECT_PUBLIC"} */
+alter session unset quoted_identifiers_ignore_case;
+[0m11:42:58.311553 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 0.046 seconds
+[0m11:42:58.319025 [debug] [Thread-2 (]: Began running node model.frosty_friday_challenges.week1_advanced
+[0m11:42:58.319991 [info ] [Thread-2 (]: 1 of 2 START sql table model PUBLIC.week1_advanced ............................. [RUN]
+[0m11:42:58.320794 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_DBT_PROJECT_PUBLIC, now model.frosty_friday_challenges.week1_advanced)
+[0m11:42:58.321402 [debug] [Thread-2 (]: Began compiling node model.frosty_friday_challenges.week1_advanced
+[0m11:42:58.332952 [debug] [Thread-2 (]: Writing injected SQL for node "model.frosty_friday_challenges.week1_advanced"
+[0m11:42:58.333999 [debug] [Thread-2 (]: Began executing node model.frosty_friday_challenges.week1_advanced
+[0m11:42:58.379863 [debug] [Thread-2 (]: Writing runtime sql for node "model.frosty_friday_challenges.week1_advanced"
+[0m11:42:58.381493 [debug] [Thread-2 (]: Using snowflake connection "model.frosty_friday_challenges.week1_advanced"
+[0m11:42:58.382248 [debug] [Thread-2 (]: On model.frosty_friday_challenges.week1_advanced: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "node_id": "model.frosty_friday_challenges.week1_advanced"} */
+create or replace transient table DBT_PROJECT.PUBLIC.week1_advanced
+         as
+        (
+
+  with source_data as (
+      select 1 as id
+      union all
+      select null as id
+  )
+
+  select *
+  from source_data
+        );
+[0m11:42:58.382858 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:42:59.250543 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.867 seconds
+[0m11:42:59.282317 [info ] [Thread-2 (]: 1 of 2 OK created sql table model PUBLIC.week1_advanced ........................ [[32mSUCCESS 1[0m in 0.96s]
+[0m11:42:59.283291 [debug] [Thread-2 (]: Finished running node model.frosty_friday_challenges.week1_advanced
+[0m11:42:59.284001 [debug] [Thread-2 (]: Began running node model.frosty_friday_challenges.week1_basic
+[0m11:42:59.284971 [info ] [Thread-2 (]: 2 of 2 START sql table model week1.week1_basic ................................. [RUN]
+[0m11:42:59.285717 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.frosty_friday_challenges.week1_advanced, now model.frosty_friday_challenges.week1_basic)
+[0m11:42:59.286317 [debug] [Thread-2 (]: Began compiling node model.frosty_friday_challenges.week1_basic
+[0m11:42:59.292332 [debug] [Thread-2 (]: Writing injected SQL for node "model.frosty_friday_challenges.week1_basic"
+[0m11:42:59.293178 [debug] [Thread-2 (]: Began executing node model.frosty_friday_challenges.week1_basic
+[0m11:42:59.299781 [debug] [Thread-2 (]: Using snowflake connection "model.frosty_friday_challenges.week1_basic"
+[0m11:42:59.300478 [debug] [Thread-2 (]: On model.frosty_friday_challenges.week1_basic: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "node_id": "model.frosty_friday_challenges.week1_basic"} */
+create or replace file format week1.csv_file_format
+         type = 'csv'
+         field_delimiter = ','
+         skip_header = 1
+         null_if = ('NULL', 'totally_empty')
+[0m11:42:59.301037 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:42:59.648078 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.347 seconds
+[0m11:42:59.651727 [debug] [Thread-2 (]: Using snowflake connection "model.frosty_friday_challenges.week1_basic"
+[0m11:42:59.652489 [debug] [Thread-2 (]: On model.frosty_friday_challenges.week1_basic: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "node_id": "model.frosty_friday_challenges.week1_basic"} */
+create or replace stage week1.week1_ext_stage
+         url = 's3://frostyfridaychallenges/challenge_1/'
+         file_format = week1.csv_file_format
+         directory = (enable = true)
+[0m11:43:01.550054 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.897 seconds
+[0m11:43:01.552179 [debug] [Thread-2 (]: Writing runtime sql for node "model.frosty_friday_challenges.week1_basic"
+[0m11:43:01.553856 [debug] [Thread-2 (]: Using snowflake connection "model.frosty_friday_challenges.week1_basic"
+[0m11:43:01.554542 [debug] [Thread-2 (]: On model.frosty_friday_challenges.week1_basic: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "frosty_friday_challenges", "target_name": "dev", "node_id": "model.frosty_friday_challenges.week1_basic"} */
+create or replace transient table DBT_PROJECT.week1.week1_basic
+         as
+        (
+
+with source as (
+    select 
+        $1 as value,
+        metadata$filename as source_file,
+        metadata$file_row_number as file_row_number,
+        metadata$start_scan_time as load_timestamp
+    from @dbt_project.week1.week1_ext_stage
+),
+
+final as (
+    select 
+        value,
+        source_file,
+        file_row_number,
+        load_timestamp
+    FROM source
+)
+
+select
+    *
+from final
+        );
+[0m11:43:03.022866 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.468 seconds
+[0m11:43:03.029615 [info ] [Thread-2 (]: 2 of 2 OK created sql table model week1.week1_basic ............................ [[32mSUCCESS 1[0m in 3.74s]
+[0m11:43:03.030575 [debug] [Thread-2 (]: Finished running node model.frosty_friday_challenges.week1_basic
+[0m11:43:03.033187 [debug] [Dummy-1   ]: Connection 'master' was properly closed.
+[0m11:43:03.033704 [debug] [Dummy-1   ]: Connection 'list_DBT_PROJECT' was properly closed.
+[0m11:43:03.034184 [debug] [Dummy-1   ]: Connection 'model.frosty_friday_challenges.week1_basic' was properly closed.
+[0m11:43:03.034776 [info ] [Dummy-1   ]: 
+[0m11:43:03.035327 [info ] [Dummy-1   ]: Finished running 2 table models in 0 hours 0 minutes and 6.62 seconds (6.62s).
+[0m11:43:03.036436 [debug] [Dummy-1   ]: Command end result
+[0m11:43:03.065628 [debug] [Dummy-1   ]: Wrote artifact WritableManifest to /tmp/dbt/target/manifest.json
+[0m11:43:03.067940 [debug] [Dummy-1   ]: Wrote artifact SemanticManifest to /tmp/dbt/target/semantic_manifest.json
+[0m11:43:03.075747 [debug] [Dummy-1   ]: Wrote artifact RunExecutionResult to /tmp/dbt/target/run_results.json
+[0m11:43:03.076294 [info ] [Dummy-1   ]: 
+[0m11:43:03.077146 [info ] [Dummy-1   ]: [32mCompleted successfully[0m
+[0m11:43:03.077699 [info ] [Dummy-1   ]: 
+[0m11:43:03.078282 [info ] [Dummy-1   ]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m11:43:03.080126 [debug] [Dummy-1   ]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.386471, "process_in_blocks": "0", "process_kernel_time": 1.25, "process_mem_max_rss": "488584", "process_out_blocks": "0", "process_user_time": 6.04}
+[0m11:43:03.080805 [debug] [Dummy-1   ]: Command `cli run` succeeded at 11:43:03.080530 after 9.39 seconds
+[0m11:43:03.081363 [debug] [Dummy-1   ]: Flushing usage events

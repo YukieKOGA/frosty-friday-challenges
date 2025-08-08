@@ -1,0 +1,11 @@
+frosty_friday_challenges:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: DBT_PROJECT
+      schema: PUBLIC
+      account: ''
+      user: ''
